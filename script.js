@@ -3,7 +3,9 @@ const products = [
   { id: 2, name: "Набор трюфелей с орехами", price: 30, image: "choco2.jpg" },
   { id: 3, name: "Мини-ассорти шоколадных пралине", price: 25, image: "choco3.jpg" },
   { id: 4, name: "Шоколадный набор с плиткой-открыткой на 8 конфет", price: 55,image: "choco4.jpg"},
-  { id: 5, name: "Набор шоколада в каллетах", price: 75, image:"choco5.jpg"}
+  { id: 5, name: "Набор шоколада в каллетах", price: 75, image:"choco5.jpg"},
+  { id: 6, name: "Букет Роз", price: 25, image:"choco6.jpg"},
+  { id: 7, name: "Клубника в шоколаде", price: 85, image:"choco7.jpg"}
 ];
 
 let cart = {};
