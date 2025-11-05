@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChocoDelight Gifts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ChocoDelight Gifts</h1>
+  </header>
+
+  <main>
+    <section id="catalog">
+      <h2>Каталог подарочных наборов</h2>
+
+      <div class="catalog-controls">
+        <input type="text" id="searchInput" placeholder="Поиск по названию..." oninput="filterAndSortProducts()" />
+        <label>
+          Цена от: <input type="number" id="minPrice" min="0" value="0" onchange="filterAndSortProducts()" style="width:80px;" />
+        </label>
+        <label>
+          до: <input type="number" id="maxPrice" min="0" value="100" onchange="filterAndSortProducts()" style="width:80px;" />
+        </label>
+        <select id="sortSelect" onchange="filterAndSortProducts()">
+          <option value="default">Сортировка</option>
+          <option value="price_asc">Цена ↑</option>
+          <option value="price_desc">Цена ↓</option>
+          <option value="name_asc">Название A-Я</option>
+          <option value="name_desc">Название Я-A</option>
+        </select>
+      </div>
+
+      <div class="products" id="productsContainer"></div>
+    </section>
+
+    <section id="cart-section">
+      <h2>Корзина</h2>
+      <div id="cart"></div>
+      <button onclick="showOrderForm()">Оформить заказ</button>
+    </section>
+
+    <section id="order-form" style="display:none;">
+      <h2>Оформление заказа</h2>
+      <form id="orderForm" onsubmit="submitOrder(event)">
+        <label>Имя: <input type="text" required /></label><br/>
+        <label>Email: <input type="email" required /></label><br/>
+        <label>Адрес доставки: <input type="text" required /></label><br/>
+        <button type="submit">Оплатить (заглушка)</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Контакты</h3>
+    <p>Телефон: +7 900 123-45-67</p>
+    <p>Email: info@chocodelight.ru</p>
+    <p>Адрес: г. Москва, ул. Шоколадная, д. 1</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
